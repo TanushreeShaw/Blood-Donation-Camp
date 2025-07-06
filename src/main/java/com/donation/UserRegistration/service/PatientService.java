@@ -1,6 +1,10 @@
 package com.donation.UserRegistration.service;
 
-public class PatientService {
+import com.donation.UserRegistration.dto.Patient;
+
+import java.util.List;
+
+public interface PatientService {
 
     List<Patient> findAllPatients();
 
