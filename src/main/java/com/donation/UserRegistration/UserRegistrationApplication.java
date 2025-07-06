@@ -7,9 +7,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class UserRegistrationApplication {
 
 	public static void main(String[] args) {
-		//dummy commit
-		SpringApplication.run(UserRegistrationApplication.class, args);
 
+		SpringApplication.run(UserRegistrationApplication.class, args);
 	}
 
 }
