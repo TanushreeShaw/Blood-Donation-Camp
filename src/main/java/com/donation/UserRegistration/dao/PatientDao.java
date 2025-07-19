@@ -1,16 +1,17 @@
 package com.donation.UserRegistration.dao;
 
 import com.donation.UserRegistration.dto.Patient;
+import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;
 
-public interface PatientDao {
+public interface PatientDao extends JpaRepository<Patient, Long> {
 
     List<Patient> findAll();
 
-    Patient findById(Long id);
+    /*Optional<Patient> findById(Long id);
 
-    void save(Patient patient);
+    Object save(Patient patient);
 
-    void deleteById(Long id);
+    void deleteById(Long id);*/
 }

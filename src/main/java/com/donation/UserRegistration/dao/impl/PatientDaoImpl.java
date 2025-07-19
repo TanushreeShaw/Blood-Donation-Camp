@@ -2,27 +2,30 @@ package com.donation.UserRegistration.dao.impl;
 
 import com.donation.UserRegistration.dao.PatientDao;
 import com.donation.UserRegistration.dto.Patient;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
-public class PatientDaoImpl implements PatientDao {
+@Repository
+public abstract class PatientDaoImpl implements PatientDao {
     @Override
     public List<Patient> findAll() {
         return List.of();
     }
 
-    @Override
-    public Patient findById(Long id) {
+    /*@Override
+    public Optional<Patient> findById(Long id) {
         return null;
     }
 
     @Override
-    public void save(Patient patient) {
+    public Object save(Patient patient) {
 
+        return null;
     }
 
     @Override
     public void deleteById(Long id) {
 
-    }
+    }*/
 }

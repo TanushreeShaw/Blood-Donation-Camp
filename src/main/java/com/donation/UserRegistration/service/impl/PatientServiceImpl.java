@@ -8,6 +8,7 @@ import com.donation.UserRegistration.dao.PatientDao;
 import com.donation.UserRegistration.service.PatientService;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class PatientServiceImpl implements PatientService {
@@ -19,7 +20,7 @@ public class PatientServiceImpl implements PatientService {
         return patientDao.findAll();
     }
 
-    public Patient findPatientById(Long id) {
+    public Optional<Patient> findPatientById(Long id) {
         return patientDao.findById(id);
     }
 

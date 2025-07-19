@@ -1,17 +1,13 @@
 package com.donation.UserRegistration.endpoint;
 
-import com.donation.UserRegistration.dto.Patient;
-import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import java.util.List;
-
-
-@RequestMapping("/patients")
+@RequestMapping("/dashboard")
 public interface PatientControllerEndpoint {
 
-    @PostMapping(value = "/list", produces = "application/json")
-    ResponseEntity<List<Patient>> getAllPatients();
+    @GetMapping(value = "/patients/list", produces = "application/json")
+    String getAllPatients(Model model);
 
 }
