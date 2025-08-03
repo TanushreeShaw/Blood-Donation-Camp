@@ -9,10 +9,10 @@ public interface PatientService {
 
     List<Patient> findAllPatients();
 
-    Optional<Patient> findPatientById(Long id);
+    //Optional<Patient> findPatientById(Long id);
 
-    void savePatient(Patient patient);
+    Patient savePatient(Patient patient);
 
-    void deletePatient(Long id);
+    //void deletePatient(Long id);
 
 }

@@ -7,11 +7,11 @@ import java.util.List;
 
 public interface PatientDao extends JpaRepository<Patient, Long> {
 
-    List<Patient> findAll();
+    /*List<Patient> findAll();
 
-    /*Optional<Patient> findById(Long id);
+    //Optional<Patient> findById(Long id);
 
-    Object save(Patient patient);
+    Patient save(Patient patient);
 
-    void deleteById(Long id);*/
+    //void deleteById(Long id);*/
 }
