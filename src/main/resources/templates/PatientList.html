@@ -10,8 +10,9 @@
 <body>
 
     <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+    <div class="w-100 d-flex justify-content-center">
     <!-- Brand -->
-    <a class="navbar-brand" href="#">&nbsp;Blood Donation Camp</a>
+    <a class="navbar-brand" href="#">&nbsp;<b>Blood Donation Camp</b></a>
 
     <!-- Toggler/collapsible Button -->
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
@@ -29,17 +30,24 @@
     <div class="container">
         <div class="text-center">
             </br>
-            <h2>Blood Donors List</h2>
+            <h2><b>Blood Donors List</b></h2>
         </div>
 
         <div class="row">
             <div class="col-lg-3">
-                <a th:href="@{new}" class="btn btn-primary btn-sm mb-3">Add Donors</a>
+                <a th:href="@{new}" class="btn btn-primary">Add Donors</a>
             </div>
         </div>
+        </br>
+    <style>
+        .table-dark-header th {
+            background-color: black;
+            color: white;
+        }
+    </style>
     <!--<h2 class=text-center>Blood Donation Camp</h2>-->
     <table class="table table-striped table-bordered">
-        <thead>
+        <thead class="table-dark-header">
             <tr>
                 <!--<th>Patient ID</th>-->
                 <th>First Name</th>
@@ -47,19 +55,24 @@
                 <th>Phone Number</th>
                 <th>Blood Group</th>
                 <th>Date of Donation</th>
+                <th>Action</th>
             </tr>
         </thead>
         <tbody>
             <tr th:each="patient:${Patient}">
-            <!--<td th:text="${patient.id}"></td>-->
-            <td th:text="${patient.firstName}"></td>
-            <td th:text="${patient.lastName}"></td>
-            <td th:text="${patient.phoneNumber}"></td>
-            <td th:text="${patient.bloodGroup}"></td>
-            <td th:text="${patient.dateOfDonation}"></td>
-            </tr>
-        </tbody>
-    </table>
-    </div>
-</body>
-</html>
+                <!--<td th:text="${patient.id}"></td>-->
+                <td th:text="${patient.firstName} ?: '-'"></td>
+                <td th:text="${patient.lastName} ?: '-'"></td>
+                <td th:text="${patient.phoneNumber} ?: '-'"></td>
+                <td th:text="${patient.bloodGroup} ?: '-'"></td>
+                <td th:text="${patient.dateOfDonation} ?: '-'"></td>
+                <td>
+                    <a th:href="@{update/{id}(id=${patient.id})}" class="btn btn-success">Edit</a>&nbsp;&nbsp;
+                    <a th:href="@{delete/{id}(id=${patient.id})}" class="btn btn-danger">Delete</a>
+                </td>
+                </tr>
+            </tbody>
+        </table>
+        </div>
+    </body>
+    </html>

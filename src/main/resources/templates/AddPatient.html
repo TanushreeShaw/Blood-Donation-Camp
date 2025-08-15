@@ -8,36 +8,64 @@
           integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
 <body>
-    <h1>Donor Registration Form</h1>
-    <form th:action="@{/dashboard/patients/save}" th:object="${Patient}" method="post">
-        <div class="form-group">
-            <label for="firstName">First Name:</label>
-            <input type="text" id="firstName" name="firstName" placeholder="Enter First Name here" required/>
+    <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+        <div class="w-100 d-flex justify-content-center">
+            <!-- Brand -->
+            <a class="navbar-brand" href="#">&nbsp;<b>Blood Donation Camp</b></a>
+
+            <!-- Toggler/collapsible Button -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Navbar links -->
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" th:href="@{list}">Dashboard</a></li>
+                </ul>
+            </div>
+    </nav>
+    </br>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-6 container justify-content-center card">
+
+                </br>
+                <div class="text-center" style="font-size: 30px; "><b>Donor Registration Form</b></div>
+                <div class="card-body"></div>
+                <form th:action="@{/dashboard/patients/save}" th:object="${Patient}" method="post">
+                    <div class="form-group">
+                        <label>First Name<span class="text-danger">*</span></label>
+                        <input type="text" name="firstName" class=" form-control" placeholder="Enter First Name here" required/>
+                    </div>
+                    </br>
+                    <div class="form-group">
+                        <label>Last Name<span class="text-danger">*</span></label>
+                        <input type="text" name="lastName" class=" form-control" placeholder="Enter Last Name here" required/>
+                    </div>
+                    </br>
+                    <div class="form-group">
+                        <label>Blood Group<span class="text-danger">*</span></label>
+                        <input type="text" name="bloodGroup" class=" form-control" placeholder="Enter Blood Group here" required/>
+                    </div>
+                    </br>
+                    <div class="form-group">
+                        <label>Phone Number<span class="text-danger">*</span></label>
+                        <input type="text" name="phoneNumber" class=" form-control" placeholder="Enter Phone Number here" required/>
+                    </div>
+                    </br>
+                    <div class="form-group">
+                        <label>Date of Donation<span class="text-danger">*</span></label>
+                        <input type="date" name="dateOfDonation" class=" form-control" placeholder="Enter Date of Donation here" required/>
+                    </div>
+                    </br>
+                    <div class="box-footer">
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </div>
+                    </br>
+                </form>
+            </div>
         </div>
-            </br>
-        <div class="form-group">
-            <label for="lastName">Last Name:</label>
-            <input type="text" id="lastName" name="lastName" placeholder="Enter Last Name here" required/>
-        </div>
-            </br>
-        <div class="form-group">
-            <label for="bloodGroup">Blood Group:</label>
-            <input type="text" id="bloodGroup" name="bloodGroup" placeholder="Enter Blood Group here" required/>
-        </div>
-            </br>
-        <div class="form-group">
-            <label for="phoneNumber">Phone Number:</label>
-            <input type="text" id="phoneNumber" name="phoneNumber" placeholder="Enter Phone Number here" required/>
-        </div>
-            </br>
-        <div class="form-group">
-            <label for="dateOfDonation">Date of Donation:</label>
-            <input type="date" id="dateOfDonation" name="dateOfDonation" placeholder="Enter Date of Donation here"/>
-        </div>
-            </br>
-        <div class="box-footer">
-            <button type="submit" class="btn btn-primary">Submit</button>
-        </div>
-    </form>
+    </div>
 </body>
 </html>

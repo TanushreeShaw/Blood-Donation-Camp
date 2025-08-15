@@ -1,14 +1,12 @@
 package com.donation.UserRegistration.service.impl;
 
 import com.donation.UserRegistration.dto.Patient;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.donation.UserRegistration.dao.PatientDao;
 import com.donation.UserRegistration.service.PatientService;
 
 import java.util.List;
-import java.util.Optional;
 
 @Service
 public class PatientServiceImpl implements PatientService {
@@ -23,16 +21,16 @@ public class PatientServiceImpl implements PatientService {
         return patientDao.findAll();
     }
 
-    /*public Optional<Patient> findPatientById(Long id) {
-        return patientDao.findById(id);
-    }*/
-
-    public Patient savePatient(Patient patient) {
-        return patientDao.save(patient);
+    public Patient findPatientById(Long id) {
+        return patientDao.findById(id).orElseThrow(() -> new RuntimeException("Patient not found with id: " + id));
     }
 
-    /*public void deletePatient(Long id) {
+    public void savePatient(Patient patient) {
+        patientDao.save(patient);
+    }
+
+    public void deletePatient(Long id) {
         patientDao.deleteById(id);
-    }*/
+    }
 
 }
