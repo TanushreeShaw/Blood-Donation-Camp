@@ -46,9 +46,7 @@ cd blood-donation-camp
 
 ## 🖼️ Screenshots
 
-[[!([landing_page.png](https://github.com/TanushreeShaw/Blood-Donation-Camp/blob/8da9a43e5b2fa5ea31e5d41b0b7f2b6c28745c0a/edit_page.png))
-![Donor Form](registration_page.png)
-![Edit Form](/edit_page.png)](https://github.com/TanushreeShaw/Blood-Donation-Camp/blob/8da9a43e5b2fa5ea31e5d41b0b7f2b6c28745c0a/edit_page.png)](https://github.com/TanushreeShaw/Blood-Donation-Camp/blob/8da9a43e5b2fa5ea31e5d41b0b7f2b6c28745c0a/edit_page.png)
+![image_alt] (https://github.com/TanushreeShaw/Blood-Donation-Camp/blob/master/images/edit_page.png?raw=true>
 
-<img width="1919" height="1172" alt="image" src="https://github.com/user-attachments/assets/430abc07-b28e-4e47-871e-305db8bc8262" />
+
 
