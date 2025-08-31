@@ -62,7 +62,6 @@ class PatientServiceImplTest {
         List<Patient> allPatients = patientService.findAllPatients();
 
         assertEquals(0, allPatients.size());
-        //verify(patientDao, times(1)).findAll();
     }
 
     /**
@@ -79,7 +78,6 @@ class PatientServiceImplTest {
         });
 
         assertEquals("Patient not found with id: 1", runtimeException.getMessage());
-        //verify(patientDao, times(1)).findById(1L);
     }
 
     /**
@@ -90,7 +88,6 @@ class PatientServiceImplTest {
     void testSavePatientSave() {
 
         patientService.savePatient(patient);
-        //verify(patientDao, times(1)).save(patient);
     }
 
     /**
@@ -101,6 +98,5 @@ class PatientServiceImplTest {
     void testDeletePatientDeleteById() {
 
         patientService.deletePatient(1L);
-        //verify(patientDao, times(1)).deleteById(1L);
     }
 }

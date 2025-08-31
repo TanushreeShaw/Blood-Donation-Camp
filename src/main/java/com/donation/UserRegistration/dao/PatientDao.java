@@ -5,7 +5,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 /**
  * Data Access Object (DAO) interface for Patient entity.
- * This interface extends JpaRepository to provide CRUD operations for Patient.
+ * This interface extends JpaRepository to provide CRUD operations for Patients.
  */
 public interface PatientDao extends JpaRepository<Patient, Long> {
 

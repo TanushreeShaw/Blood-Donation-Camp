@@ -63,6 +63,13 @@
 			<scope>runtime</scope>
 			<optional>true</optional>
 		</dependency>
+		<!-- Hibernate Validator - the implementation -->
+		<dependency>
+			<groupId>org.hibernate.validator</groupId>
+			<artifactId>hibernate-validator</artifactId>
+			<version>8.0.1.Final</version> <!-- Use latest compatible -->
+		</dependency>
+
 	</dependencies>
 
 	<build>
