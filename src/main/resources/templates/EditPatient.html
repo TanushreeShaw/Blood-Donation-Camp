@@ -24,13 +24,14 @@
         <li class="nav-item"><a class="nav-link" th:href="@{/dashboard/patients/list}">Dashboard</a></li>
       </ul>
     </div>
+  </div>
 </nav>
-</br>
+<br>
 <div class="container">
   <div class="row">
     <div class="col-lg-6 col-md-6 col-sm-6 container justify-content-center card">
 
-      </br>
+      <br>
       <div class="text-center" style="font-size: 30px; "><b>Edit Donor Details</b></div>
       <div class="card-body"></div>
       <form th:action="@{/dashboard/patients/update/{id}(id=${Patient.id})}" th:object="${Patient}" method="post">
@@ -38,41 +39,41 @@
           <label>First Name<span class="text-danger">*</span></label>
           <input type="text" name="firstName" class=" form-control" th:field="*{firstName}" placeholder="Enter First Name here" required/>
         </div>
-        </br>
+        <br>
         <div class="form-group">
           <label>Last Name<span class="text-danger">*</span></label>
           <input type="text" name="lastName" class=" form-control" th:field="*{lastName}" placeholder="Enter Last Name here" required/>
         </div>
-        </br>
+        <br>
         <div class="form-group">
           <label>Blood Group<span class="text-danger">*</span></label>
           <input type="text" name="bloodGroup" class=" form-control" th:field="*{bloodGroup}" placeholder="Enter Blood Group here" required/>
         </div>
-        </br>
+        <br>
         <div class="form-group">
           <label>Phone Number<span class="text-danger">*</span></label>
           <input type="text" name="phoneNumber" class=" form-control" th:field="*{phoneNumber}" placeholder="Enter Phone Number here" required/>
         </div>
-        </br>
+        <br>
         <div class="form-group">
           <label>Old Date of Donation</label>
           <div class="form-control mb-2" readonly
                th:text="${#temporals.format(Patient.dateOfDonation, 'dd-MM-yyyy')}"></div>
         </div>
-        </br>
+        <br>
         <div class="form-group">
           <label>Update Date of Donation<span class="text-danger">*</span></label>
           <input type="date" name="dateOfDonation" class=" form-control" th:field="*{dateOfDonation}" placeholder="Enter Date of Donation here" required/>
         </div>
-        </br>
+        <br>
         <div class="box-footer text-center">
           <button type="submit" class="btn btn-primary">Save</button>
         </div>
       </form>
-      </br>
+      <br>
     </div>
   </div>
-  </br>
+  <br>
 </div>
 </body>
 </html>

@@ -25,11 +25,12 @@
             <li class="nav-item"><a class="nav-link" th:href="@{list}">Dashboard</a></li>
         </ul>
     </div>
+    </div>
     </nav>
 
     <div class="container">
         <div class="text-center">
-            </br>
+            <br>
             <h2><b>Blood Donors List</b></h2>
         </div>
 
@@ -38,7 +39,7 @@
                 <a th:href="@{new}" class="btn btn-primary">Add Donors</a>
             </div>
         </div>
-        </br>
+        <br>
     <style>
         .table-dark-header th {
             background-color: black;
@@ -70,7 +71,7 @@
                     <a th:href="@{update/{id}(id=${patient.id})}" class="btn btn-success">Edit</a>&nbsp;&nbsp;
                     <a th:href="@{delete/{id}(id=${patient.id})}" class="btn btn-danger">Delete</a>
                 </td>
-                </tr>
+            </tr>
             </tbody>
         </table>
         </div>

@@ -3,7 +3,10 @@ package com.donation.UserRegistration.dao;
 import com.donation.UserRegistration.dto.Patient;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-
+/**
+ * Data Access Object (DAO) interface for Patient entity.
+ * This interface extends JpaRepository to provide CRUD operations for Patient.
+ */
 public interface PatientDao extends JpaRepository<Patient, Long> {
 
     // This interface extends JpaRepository to provide CRUD operations for the Patient entity.

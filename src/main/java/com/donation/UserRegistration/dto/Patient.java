@@ -5,11 +5,21 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Table;
 import jakarta.persistence.Column;
+import jakarta.validation.constraints.NotBlank;
 import jakarta.persistence.GenerationType;
+import jakarta.validation.constraints.Pattern;
 
 import java.time.LocalDate;
 import java.util.Objects;
 
+/**
+ * Entity class representing a Patient.
+ * This class is mapped to the PATIENT_DB table in the database.
+ * It includes fields for patient details such as first name, last name, phone number, blood group, and date of donation.
+ * The class provides constructors, getters, setters, and overrides for equals and hashCode methods.
+ * It uses JPA annotations for ORM mapping.
+ *
+ */
 @Entity
 @Table(name = "PATIENT_DB")
 public class Patient {
@@ -24,7 +34,9 @@ public class Patient {
     @Column(name = "LAST_NAME")
     private String lastName;
 
-    @Column(name = "PHN_NO")
+    @Column(name = "PHN_NO", nullable = false)
+    @NotBlank(message = "Phone number is required")
+    @Pattern(regexp = "\\d{10}", message = "Phone number must be 10 digits")
     private String phoneNumber;
 
     @Column(name = "BLOOD_GRP")
@@ -32,15 +44,6 @@ public class Patient {
 
     @Column(name = "DATE_OF_DONATION")
     private LocalDate dateOfDonation;
-
-    public Patient(Long id, LocalDate dateOfDonation, String bloodGroup, String lastName, String phoneNumber, String firstName) {
-        this.id = id;
-        this.dateOfDonation = dateOfDonation;
-        BloodGroup = bloodGroup;
-        this.lastName = lastName;
-        this.phoneNumber = phoneNumber;
-        this.firstName = firstName;
-    }
 
     @Override
     public boolean equals(Object o) {
