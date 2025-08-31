@@ -46,7 +46,6 @@ cd blood-donation-camp
 
 ## 🖼️ Screenshots
 
-<img width="1919" height="1172" alt="edit_page" src="https://github.com/user-attachments/assets/39051073-7388-4c83-b29e-c2546d2df4ad" />
-<img width="1919" height="1172" alt="landing_page" src="https://github.com/user-attachments/assets/efd4a102-ec6b-43ef-b1f5-b46fc565f661" />
-<img width="1918" height="1172" alt="registration_page" src="https://github.com/user-attachments/assets/e79c3034-36a0-463a-ab66-5594956d0043" />
-
+![Home Page](images/landing_page.png)
+![Donor Form](images/registration_page.png)
+![Edit Form](images/edit_page.png)
