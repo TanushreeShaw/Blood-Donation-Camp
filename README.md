@@ -46,6 +46,7 @@ cd blood-donation-camp
 
 ## 🖼️ Screenshots
 
-![Edit Page](https://github.com/TanushreeShaw/Blood-Donation-Camp/blob/master/images/edit_page.png?raw=true)
-![Home Page](https://github.com/TanushreeShaw/Blood-Donation-Camp/blob/master/images/landing_page.png?raw=true)
-![Registration Page](https://github.com/TanushreeShaw/Blood-Donation-Camp/blob/master/images/registration_page.png?raw=true)
+<img width="1919" height="1172" alt="Image" src="https://github.com/user-attachments/assets/981930d9-733e-4b62-93b9-8509799a8420" />
+<img width="1918" height="1172" alt="Image" src="https://github.com/user-attachments/assets/bf500cb4-10d6-4da8-bcc9-13531757cfcd" />
+<img width="1919" height="1172" alt="Image" src="https://github.com/user-attachments/assets/65f93c26-cda6-47ce-a71d-f789121fa947" />
+
