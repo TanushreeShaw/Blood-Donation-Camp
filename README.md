@@ -50,8 +50,8 @@ cd blood-donation-camp
 ![Home Page](images/landing_page.png)
 
 ### 📝 Donor Registration Form
-![Donor Form](screenshots/registration_page.png)
+![Donor Form](images/registration_page.png)
 
 ### 📝 Edit Registration Form
-![Edit Form](screenshots/edit_page.png)
+![Edit Form](images/edit_page.png)
 
